@@ -40,13 +40,13 @@ namespace GradeBook.UserInterfaces
                 return;
             }
             var name = parts[2];
-            if (name == "standard")
+            if (Equals(name,"standard"))
             {
                 StandardGradeBook gradeBook = new StandardGradeBook(name);
                 Console.WriteLine("Created gradebook {0}.", name);
                 GradeBookUserInterface.CommandLoop(gradeBook);
             }
-            else if (name == "ranked")
+            else if (Equals(name,"ranked"))
                 {
                 RankedGradeBook gradeBook = new RankedGradeBook(name);
                 Console.WriteLine("Created gradebook {0}.", name);
